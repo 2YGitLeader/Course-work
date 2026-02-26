@@ -9,10 +9,13 @@ export function* fibonacciGenerator() {
 export async function timeoutIterator(iterator, timeoutSeconds) {
     const startTime = Date.now();
     const timeoutMs = timeoutSeconds * 1000;
+    
     for (const value of iterator) {
         if (Date.now() - startTime > timeoutMs) {
-            console.log("Timeout expired.");
+            console.log("Time is up");
             break;
         }
+        console.log(`received: ${value}`);
+        await new Promise(res => setTimeout(res, 100)); 
     }
 }
