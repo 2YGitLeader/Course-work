@@ -5,3 +5,8 @@ export function* fibonacciGenerator() {
         [a, b] = [b, a + b];
     }
 }
+
+export async function timeoutIterator(iterator, timeoutSeconds) {
+    const startTime = Date.now();
+    const timeoutMs = timeoutSeconds * 1000;
+}
