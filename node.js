@@ -1,3 +1,4 @@
+// lab 1
 export function* fibonacciGenerator() {
     let [a, b] = [0, 1];
     while (true) {
@@ -19,3 +20,6 @@ export async function timeoutIterator(iterator, timeoutSeconds) {
         await new Promise(res => setTimeout(res, 100)); 
     }
 }
+
+// lab 3
+
