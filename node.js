@@ -9,4 +9,10 @@ export function* fibonacciGenerator() {
 export async function timeoutIterator(iterator, timeoutSeconds) {
     const startTime = Date.now();
     const timeoutMs = timeoutSeconds * 1000;
+    for (const value of iterator) {
+        if (Date.now() - startTime > timeoutMs) {
+            console.log("Timeout expired.");
+            break;
+        }
+    }
 }
