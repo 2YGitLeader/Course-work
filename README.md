@@ -1,1 +1,1 @@
-# Labs.OP2
+Development of a Library of Advanced Utilities and Architectural Patterns in JavaScript
