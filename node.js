@@ -22,4 +22,5 @@ export async function timeoutIterator(iterator, timeoutSeconds) {
 }
 
 // lab 3
-
+export function memoize(fn, maxCacheSize = Infinity) {
+    const cache = new Map();
