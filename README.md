@@ -1,1 +1,1 @@
-Development of a Library of Advanced Utilities and Architectural Patterns in JavaScript
+Development of a Library of Advanced Utilities and Architectural Patterns
