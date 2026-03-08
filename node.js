@@ -27,3 +27,9 @@ export function memoize(fn, maxCacheSize = Infinity) {
 
     return function (...args) {
         const key = JSON.stringify(args);
+        if (cache.has(key)) {
+            const value = cache.get(key);
+            cache.delete(key);
+            cache.set(key, value);
+            return value;
+        }
