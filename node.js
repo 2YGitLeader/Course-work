@@ -36,3 +36,12 @@ export function memoize(fn, maxCacheSize = Infinity) {
         
         const result = fn(...args);
         cache.set(key, result);
+
+        if (cache.size > maxCacheSize) {
+            const oldestKey = cache.keys().next().value;
+            cache.delete(oldestKey);
+        }
+
+        return result;
+    };
+}
