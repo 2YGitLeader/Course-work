@@ -33,3 +33,6 @@ export function memoize(fn, maxCacheSize = Infinity) {
             cache.set(key, value);
             return value;
         }
+        
+        const result = fn(...args);
+        cache.set(key, result);
