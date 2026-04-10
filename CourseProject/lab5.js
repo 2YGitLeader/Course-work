@@ -5,3 +5,9 @@ export async function asyncMapPromise(array, asyncCallback, signal) {
         if (signal?.aborted) {
             throw new Error("The process has been cancelled");
         }
+        
+        const mappedValue = await asyncCallback(array[i]);
+        results.push(mappedValue);
+    }
+    return results;
+}
